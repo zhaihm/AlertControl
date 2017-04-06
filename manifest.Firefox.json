@@ -1,0 +1,29 @@
+{
+    "name": "Alert Control",
+    "version": "1.0",
+    "description": "Manage alerts",
+    "icons": {
+        "16":  "icon.png",
+        "32":  "icon.png",
+        "48":  "icon.png",
+        "128": "icon.png"
+    },
+
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "applications": {
+        "gecko": {
+            "id": "AlertControl",
+            "strict_min_version": "50.0"
+        }
+    }
+}
