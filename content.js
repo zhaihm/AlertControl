@@ -3,6 +3,12 @@ var disablerFunction = function () {
     window.alert = function alert(msg) {
         console.log('Hidden Alert: ' + msg);
     };
+    window.confirm = function confirm(msg) {
+    	console.log('Hidden Confirm: ' + msg)
+    };
+    window.prompt = function prompt(msg) {
+    	console.log('Hidden prompt: ' + msg)
+    };
 };
 
 var disablerCode = "(" + disablerFunction.toString() + ")();";
